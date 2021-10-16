@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alt-Notes</title>
+       <!--Google Fonts-->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+       <!--Font Awesome-->
+       <script
+       src="https://kit.fontawesome.com/5cc6fb9f6b.js"
+       crossorigin="anonymous"
+     ></script>
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container flex justify-between align-center">
+            <a class="logo"  href="#"> Alt-Notes</a>
+            
+                <div>
+                  <p>Hey <cite class="name" ></cite> !</p>
+                </div>          
+        </div>
+    </header>  
+<!-- Main -->
+    <main style="padding-top: .5rem;">
+    <div class="container flex justify-between align-start">
+       <aside class="flex-24">
+        <form action="">
+            <h1>Add Notes</h1>
+            <input
+            type="text"
+            id="tag"
+            name="tag"
+            placeholder="Enter the Tag..."
+          />
+            <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter the Title..."
+          />
+          <textarea
+            type="text"
+            id="description"
+            name="description"
+            placeholder="Enter the Description..." 
+          > Enter the Description...</textarea>
+
+          <button type="submit">Add Note</button>
+        </form>
+        <div>
+            <h1>Filters</h1>
+           <button class="filter starred">Starred</button> 
+           <button class="filter unstarred">UnStarred</button> 
+           <button class="filter all">All</button> 
+        </div>
+
+        <div>
+            <h1>Tags</h1>
+            <p class="flex justify-start align-center flex-wrap allTags">
+
+  
+            </p>
+        </div>
+       </aside>
+
+    
+
+    <main class="flex-75 "> 
+        <ul  class="root flex justify-start align-start flex-wrap align-c-start">
+
+        </ul>
+    </main>
+    </div>
+    </main>
+<script src="./script.js"></script>
+</body>
+</html>

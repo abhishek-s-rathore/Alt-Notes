@@ -1,0 +1,376 @@
+@import url('./reset.css');
+
+/* Custom Styles */
+html{
+    font-size: 16px;
+    background-color: black;
+    color:white;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    padding:1rem;
+}
+
+.container{
+    max-width: 1480px;
+    width: 100%;
+    padding:0 1.5rem;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.logo{
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo img{
+    width:40px
+}
+
+.flex{
+ display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-start{
+    justify-content: flex-start;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.align-start{
+    align-items: flex-start;
+}
+
+.align-c-start{
+    align-content: flex-start;
+}
+
+.flex-wrap{
+        flex-wrap: wrap;
+}
+
+.flex-24{
+    flex: 0 1 21%;
+}
+
+.flex-75{
+    flex: 0 1 78%;
+}
+
+
+header{
+    border-bottom: 1px solid green;
+    box-shadow: 2px 2px 10px rgb(20, 122, 20), -5px -5px 6px rgb(15, 117, 15);
+}
+
+aside{
+    border-right: 2px solid green;
+    height: 92.2vh;
+}
+
+div main{
+    height: 90.5vh;
+    overflow: auto;
+    padding-bottom: 1rem;
+}
+
+body::-webkit-scrollbar {
+    width: 0;              
+}
+
+main::-webkit-scrollbar {
+    width: 10px;              
+}
+  
+
+main::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);    
+
+  } 
+  
+  main::-webkit-scrollbar-thumb {
+    background-color:green; 
+    border-radius: 20px;       
+    border: 2px solid black;  
+  }
+
+
+.card{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border: 1px solid  rgb(190, 190, 33);
+    border-radius: .35rem;
+    padding: 1rem;
+    flex: 0 1 20%;
+    height: 305px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: 2px 2px 7px rgba(255,255,255, .4), -1px -1px 3px rgba(255,255,255, .3) ;
+}
+
+.card span{
+    margin-bottom: 1rem;
+}
+
+
+h2{
+font-size: 1.4rem;
+font-weight: 600;
+font-style: italic;
+border-bottom: 1px solid greenyellow;
+padding-bottom: .2rem;
+margin: 1rem auto;
+width: 100%;
+}
+
+p{
+    width: 100%;
+    text-align: left;
+    overflow: auto;
+    font-style: italic;
+}
+
+p::-webkit-scrollbar{
+    display: none;
+}
+
+.wrap{
+   width: 100%;
+   text-align: right;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+span{
+    font-size: .8rem;
+    font-weight: 600;
+    margin: 0 auto;
+    background-color: greenyellow;
+    color: black;
+    padding: .4rem;
+    border-radius: .25rem;
+}
+
+.classSpan{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    background-color: greenyellow;
+    color: black;
+    padding: .4rem;
+    border-radius: .25rem;
+    border:none;
+    outline: none;
+    font-size: .7rem;
+padding-bottom: -1.5rem;
+margin-bottom: .9rem;
+}
+
+
+.classH2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-style: italic;
+    border:none;
+    outline: none;
+    background-color:black;
+    color: white;
+    border-bottom: 1px solid greenyellow;
+    padding-bottom: .1rem;
+    margin: .9rem auto;
+    width: 100%;
+    }
+
+
+  .classP{  
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    background-color:black;
+    color: white;
+    border:none;
+    outline: none;
+    height: 400px;
+    width: 100%;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1;
+    overflow: hidden;
+}
+
+
+.imp{
+    font-size: 1.2rem;
+    color: gray;
+    margin-left: 1rem;
+    margin-top: .4rem;
+}
+
+.dlt{
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.dlt:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.imp:hover{
+   color: goldenrod;
+   cursor: pointer;
+}
+
+.active{
+    color:gold;
+}
+
+
+form{
+    text-align: center;
+    width: 85%;
+    padding-right: 1rem;
+    margin-top: 1.2rem;
+    padding:1rem;
+    border: 1px solid  rgb(190, 190, 33);
+    border-radius: .5rem;
+    box-shadow: 2px 2px 7px rgba(255,255,255, .4), -1px -1px 3px rgba(255,255,255, .3) ;
+}
+
+form input{
+    width: 90%;
+    margin-bottom: 1rem;
+    background-color: black;
+   
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid gray;
+   
+    outline: none;
+    height: 1.8rem;
+    padding-left: .5rem;
+    padding-top: .25rem;
+}
+
+form textarea{
+    width: 91%;
+    margin-bottom: 1rem;
+    background-color: black;
+    color: gray;
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid gray;
+    outline: none;
+    height: 1.8rem;
+    padding-left: .3rem;
+    padding-top: .25rem;
+    height: 8.5rem;
+    resize: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;              
+}
+  
+
+textarea::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);    
+
+  } 
+  
+  textarea::-webkit-scrollbar-thumb {
+    background-color:green; 
+    border-radius: 20px;       
+    border: 2px solid black;  
+  }
+
+
+
+form button{
+    width: 95%;
+    background-color: black;
+    color:green;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid gray;
+    outline: none;
+    height: 2.1rem;
+
+}
+
+button:hover{
+    cursor: pointer;
+    font-weight: 800;
+    background-color:rgb(41, 41, 41);
+}
+
+h1{
+    text-align: center;
+    color: green;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem auto;
+    margin-top: 0;
+}
+
+
+aside div{
+    text-align: center;
+    margin-top: 1rem;
+    padding:1rem;
+    width: 85%;
+    border: 1px solid  rgb(190, 190, 33);
+    border-radius: .5rem;
+    box-shadow: 2px 2px 7px rgba(255,255,255, .4), -1px -1px 3px rgba(255,255,255, .3) ;
+}
+
+.filter{
+    margin-top: 1rem;
+    color:green;
+    background-color: black;
+    border: none;
+    padding:.5rem 1rem;
+    border: 1px solid gray;
+    border-radius: .25rem;
+}
+
+.filter:hover{
+   padding:.5rem .9rem
+}
+
+.allTags button:hover{
+    padding:.5rem .96rem;
+}
+
+
+.name{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}

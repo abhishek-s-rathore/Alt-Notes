@@ -1,3 +1,5 @@
+function main(){
+
 // Slecting The Elements
 let rootElem = document.querySelector(".root");
 let form = document.querySelector("form");
@@ -10,9 +12,12 @@ let user = document.querySelector(".name");
 
 // Taking Data From LocalStorage
 let notesData = JSON.parse(localStorage.getItem("notes")) || [];
+    notesData = notesData.reverse();
 let name = localStorage.getItem("name") || 'User';
-user.innerText = name;
-// All Tags
+    user.innerText = name;
+
+
+//Getting  All Tags
 let allTags = [];
 notesData.forEach(note => {
   if (!allTags.includes(note.tag)) {
@@ -20,21 +25,28 @@ notesData.forEach(note => {
   }
 });
 
-
-// Presenting ALl Tags
-allTags.forEach(tag => {
-  let button = document.createElement('button');
-  button.classList.add('filter');
-  button.innerText = tag;
-  button.addEventListener('click', (event) => {
-    let arr = notesData.filter(note => {
-      return note.tag === tag;
+// Presenting All Tags
+if (allTags.length) {
+  allTags.forEach(tag => {
+    let button = document.createElement('button');
+    button.classList.add('filter');
+    button.innerText = tag;
+    button.addEventListener('click', (event) => {
+      let arr = notesData.filter(note => {
+        return note.tag === tag;
+      });
+      createUI(arr, rootElem);
     });
-    createUI(arr, rootElem);
+    button.style.marginRight = '.5rem'
+    allTagsBox.append(button);
   });
-  button.style.marginRight = '.5rem'
-  allTagsBox.append(button);
-})
+} else {
+  let p = document.createElement('p');
+  p.innerText = "No Tags Present Yet";
+  p.style.textAlign = 'center';
+  allTagsBox.append(p);
+}
+
 
 // Editing Name
 function handleEditName(event) {
@@ -46,7 +58,7 @@ function handleEditName(event) {
   input.value = name;
   input.addEventListener("keyup", (e) => {
     if (e.keyCode === 13) {
-      localStorage.setItem('name',e.target.value);
+      localStorage.setItem('name', e.target.value);
       elem.innerText = e.target.value;
       let parent = e.target.parentElement;
       parent.replaceChild(elem, e.target);
@@ -83,8 +95,11 @@ all.addEventListener('click', (event) => {
   createUI(notesData, rootElem);
 });
 
+
+
 // Handling Edit Functions
 // Tag
+
 function handleEditSpan(event, info, index, label) {
   let elem = event.target;
   let input = document.createElement("input");
@@ -177,7 +192,7 @@ function hanndleDelete(event) {
   location.reload();
 }
 
-// Important
+// Starred-UnStarred
 function hanndleImportant(event) {
   let ind = event.target.dataset.id;
   notesData[ind].isImportant = !notesData[ind].isImportant;
@@ -255,3 +270,7 @@ form.addEventListener("submit", (event) => {
 
 // Calling CreateUI Function
 createUI(notesData, rootElem);
+
+}
+
+main();

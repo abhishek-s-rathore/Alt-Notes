@@ -265,6 +265,7 @@ form.addEventListener("submit", (event) => {
     event.target.elements.title.value = '';
     event.target.elements.description.value = '';
     createUI(notesData, rootElem);
+    location.reload();
   }
 });
 

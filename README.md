@@ -10,6 +10,7 @@ Alt-Notes is made using HTML, CSS, and JavaScript.
 ## Features
 ```txt
 We can add quick notes using form in aside bar.
+We can also change user's name by double clicking the name.
 We can edit title, description as well as tag by double clicking on that.
 Hence we will be gettig a good User Experience.
 We can mark Star or Unstar any notes.

@@ -10,7 +10,8 @@ Alt-Notes is made using HTML, CSS, and JavaScript.
 ## Features
 ```txt
 We can add quick notes using form in aside bar.
-We can edit title, description as well as tag by double clicking on that, hence we will be gettig a good User Experience.
+We can edit title, description as well as tag by double clicking on that.
+Hence we will be gettig a good User Experience.
 We can mark Star or Unstar any notes.
 We can delete the notes easily.
 Latest note will be at first and oldest will be at last.
